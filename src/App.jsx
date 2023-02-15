@@ -1,6 +1,8 @@
 import Button from './components/button';
+import Counter from './components/Counter';
 import espoch from './images/logoico.png';
-import './styles/button.css';
+import './styles/Button.css';
+import './styles/Counter.css'
 
 function App() {
   const add = () => {
@@ -17,9 +19,11 @@ function App() {
         <img src='' alt='' />
         <img className='espochLogo' src={espoch} alt='Logo ESPOCH' />
       </div>
-      <div className='contenedor'></div>
-      <Button text='ADD' buttonClick={true} manageClick={add} />
-      <Button text='RESET' buttonClick={false} manageClick={reset} />
+      <div className='contenedor'>
+        <Counter numero={0} />
+        <Button text='ADD' buttonClick={true} manageClick={add} />
+        <Button text='RESET' buttonClick={false} manageClick={reset} />
+      </div>
     </div>
   );
 }
