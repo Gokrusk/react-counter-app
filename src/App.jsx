@@ -1,13 +1,16 @@
 import Button from './components/button';
 import espoch from './images/logoico.png';
+import './styles/button.css';
 
 function App() {
   const add = () => {
-    console.log('clic')
-  }
+    console.log('clic');
+  };
+
   const reset = () => {
-    console.log('reset')
-  }
+    console.log('reset');
+  };
+
   return (
     <div className='App'>
       <div className='espoch-logo-contenedor'>
@@ -15,16 +18,8 @@ function App() {
         <img className='espochLogo' src={espoch} alt='Logo ESPOCH' />
       </div>
       <div className='contenedor'></div>
-      <Button
-        text = 'ADD'
-        buttonClick={true}
-        manejarClic={add}
-      />
-      <Button
-        text = 'RESET'
-        buttonClick={false}
-        manejarClic={reset}
-      />
+      <Button text='ADD' buttonClick={true} manageClick={add} />
+      <Button text='RESET' buttonClick={false} manageClick={reset} />
     </div>
   );
 }

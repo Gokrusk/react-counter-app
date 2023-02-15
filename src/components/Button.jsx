@@ -1,10 +1,10 @@
 import React from 'react';
 
-function Button({ text, buttonClick, manejarClic }) {
+function Button({ text, buttonClick, manageClick }) {
   return (
     <button
-      className={buttonClick ? 'boton-clic' : 'boton-reset'}
-      onClick={manejarClic}
+      className={buttonClick ? 'btn-click' : 'btn-reset'}
+      onClick={manageClick}
     >
       {text}
     </button>
